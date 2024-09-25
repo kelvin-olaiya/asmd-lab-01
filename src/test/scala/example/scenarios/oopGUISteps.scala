@@ -34,17 +34,13 @@ class oopGUISteps extends ScalaDsl with EN with Matchers:
       }
   }
 
-  Given("none of the numbered cells are at the left border") { () =>
-    leftBorderReached(logics.get) should be(false)
-  }
-
   When("the user clicks on any other cell") { () =>
     logics.get.hit(getPosition(gridSize))
     updateCellOffset()
   }
 
-  Then("the numbered cells are moved to the left by one position") { () =>
-    checkIfNumberedCellsHaveMovedByOffset(cellOffset)
+  Given("none of the numbered cells are at the left border") { () =>
+    leftBorderReached(logics.get) should be(false)
   }
 
   Given(
@@ -57,12 +53,12 @@ class oopGUISteps extends ScalaDsl with EN with Matchers:
     changeDirection()
   }
 
-  Given("none of the numbered cells are at the right border") { () =>
-    rightBorderReached(logics.get) should be(false)
+  Then("the numbered cells are moved to the left by one position") { () =>
+    checkIfNumberedCellsHaveMovedByOffset(cellOffset)
   }
 
-  Then("the numbered cells are moved to the right by one position") { () =>
-    checkIfNumberedCellsHaveMovedByOffset(cellOffset)
+  Given("none of the numbered cells are at the right border") { () =>
+    rightBorderReached(logics.get) should be(false)
   }
 
   Given(
@@ -71,6 +67,10 @@ class oopGUISteps extends ScalaDsl with EN with Matchers:
     while (!rightBorderReached(logics.get)) {
       logics.get.hit(getPosition(gridSize))
     }
+  }
+
+  Then("the numbered cells are moved to the right by one position") { () =>
+    checkIfNumberedCellsHaveMovedByOffset(cellOffset)
   }
 
   Then("the game ends") { () =>

@@ -14,6 +14,7 @@ object Dependecies {
     "io.cucumber" % "cucumber-junit" % cucumberVersion % Test
   val cucumberJvm = "io.cucumber" % "cucumber-jvm" % cucumberVersion % Test
   val cucumberScala = "io.cucumber" %% "cucumber-scala" % cucumberVersion % Test
+  val cucumberJava = "io.cucumber" %% "cucumber-java" % cucumberVersion % Test
   val scalactic = "org.scalactic" %% "scalactic" % scalaTestVersion
   val scalaTest = "org.scalatest" %% "scalatest" % scalaTestVersion % Test
   val scalaCheck = "org.scalacheck" %% "scalacheck" % "1.18.1" % Test
@@ -26,6 +27,7 @@ object Dependecies {
    * Bundles
    */
   val scalaTestBundle: Seq[ModuleID] = Seq(scalaTest, scalactic)
-  val cucumberBundle: Seq[ModuleID] = Seq(cucumberCore, cucumberScala)
+  val cucumberBundle: Seq[ModuleID] =
+    Seq(cucumberCore, cucumberScala)
   val mockitoBundle: Seq[ModuleID] = Seq(mockitoCore, scalaTestMockito)
 }

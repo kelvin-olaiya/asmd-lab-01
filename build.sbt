@@ -5,7 +5,10 @@ ThisBuild / scalaVersion := "3.5.1"
 ThisBuild / organization := "io.github.kelvindev15"
 
 enablePlugins(CucumberPlugin)
-CucumberPlugin.glues := List("example.scenarios")
+CucumberPlugin.glues := List(
+  "calculator",
+  "example.scenarios"
+)
 
 scalafmtDetailedError := true
 /*
@@ -29,5 +32,9 @@ lazy val asmdLab1 = (project in file("."))
     libraryDependencies ++= cucumberBundle,
     libraryDependencies += scalaTestJUnit5,
     libraryDependencies ++= mockitoBundle,
-    libraryDependencies += scalaCheck
+    libraryDependencies += scalaCheck,
+    libraryDependencies ++= Seq(
+      "net.aichler" % "jupiter-interface" % JupiterKeys.jupiterVersion.value % Test,
+      "io.cucumber" % "cucumber-java" % "6.1.1" % Test
+    )
   )

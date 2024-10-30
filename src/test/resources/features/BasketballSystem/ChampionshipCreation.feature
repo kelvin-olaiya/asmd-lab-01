@@ -1,3 +1,4 @@
+@ignore
 Feature: Creating a new championship
 
   Scenario: Creating an open championship

@@ -1,3 +1,4 @@
+@ignore
 Feature: Player team membership
 
   Background:

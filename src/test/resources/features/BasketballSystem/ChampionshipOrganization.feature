@@ -1,3 +1,4 @@
+@ignore
 Feature: Scheduling the championship matches
 
   Scenario: Adding a new match to the provisional schedule

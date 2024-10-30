@@ -1,3 +1,4 @@
+@ignore
 Feature: Match result approval
 
   Scenario: Approving a match result

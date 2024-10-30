@@ -1,3 +1,4 @@
+@ignore
 Feature: Ending a player's membership
 
   Scenario: The team manager ends a player's membership

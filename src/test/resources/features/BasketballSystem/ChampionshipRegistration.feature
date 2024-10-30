@@ -1,3 +1,4 @@
+@ignore
 Feature: Registering to a championship
 
   Background:

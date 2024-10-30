@@ -9,7 +9,6 @@ CucumberPlugin.glues := List(
   "calculator",
   "example.scenarios"
 )
-
 scalafmtDetailedError := true
 /*
  * Wartremover

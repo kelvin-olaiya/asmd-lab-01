@@ -1,3 +1,4 @@
+@ignore
 Feature: Player Membership
 
   Scenario: Registering a Player

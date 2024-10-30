@@ -29,7 +29,6 @@ lazy val asmdLab1 = (project in file("."))
     scalaVersion := "3.5.1",
     libraryDependencies ++= scalaTestBundle,
     libraryDependencies ++= cucumberBundle,
-    libraryDependencies += scalaTestJUnit5,
     libraryDependencies ++= mockitoBundle,
     libraryDependencies += scalaCheck,
     libraryDependencies ++= Seq(

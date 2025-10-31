@@ -33,6 +33,6 @@ lazy val asmdLab1 = (project in file("."))
     libraryDependencies += scalaCheck,
     libraryDependencies ++= Seq(
       "net.aichler" % "jupiter-interface" % JupiterKeys.jupiterVersion.value % Test,
-      "io.cucumber" % "cucumber-java" % "7.30.0" % Test
+      "io.cucumber" % "cucumber-java" % "7.31.0" % Test
     )
   )

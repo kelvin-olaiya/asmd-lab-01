@@ -1,7 +1,7 @@
 import java.io.File
 import Dependecies.*
 
-ThisBuild / scalaVersion := "3.7.4"
+ThisBuild / scalaVersion := "3.8.0"
 ThisBuild / organization := "io.github.kelvindev15"
 
 enablePlugins(CucumberPlugin)
@@ -26,7 +26,7 @@ Compile / doc / target := baseDirectory.value / "api"
 lazy val asmdLab1 = (project in file("."))
   .settings(
     name := "ASMD Lab 1",
-    scalaVersion := "3.7.4",
+    scalaVersion := "3.8.0",
     libraryDependencies ++= scalaTestBundle,
     libraryDependencies ++= cucumberBundle,
     libraryDependencies ++= mockitoBundle,
